@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
@@ -8,14 +8,37 @@ function App() {
   const [name, setName] = useState("");
 
   async function greet() {
-    // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
     setGreetMsg(await invoke("greet", { name }));
-    invoke('prueba');
   }
+
+  useEffect(() => {
+    const button = document.getElementById('boton_select');
+    if (button) {
+      const handleClick = async () => {
+        try {
+          const direccion_folder = await invoke('select_folder');
+          if (direccion_folder) {
+            console.log("Se pudo seleccionar correctamente la carpeta: ", direccion_folder);
+          } else {
+            console.log("No se logró seleccionar ninguna carpeta");
+          }
+        } catch (error) {
+          console.log("Error al seleccionar la carpeta: ", error);
+        }
+      };
+      button.addEventListener('click', handleClick);
+
+      return () => {
+        button.removeEventListener('click', handleClick);
+      };
+    }
+  }, []);
+
 
   return (
     <div className="container">
       <h1>Welcome to Tauri!</h1>
+      <button id ="boton_select">Selecciona la carpeta</button>
 
       <div className="row">
         <a href="https://vitejs.dev" target="_blank">
