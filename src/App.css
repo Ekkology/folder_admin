@@ -114,3 +114,35 @@ button {
     background-color: #0f0f0f69;
   }
 }
+.primer_form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; 
+  max-width: 100%; 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  gap: 3%;
+  padding: 10px;
+  background-color: rgb(216, 210, 210);
+  border: 1px solid #9a9595;
+  border-radius: 5px;
+  box-sizing: border-box;
+  
+    
+}
+.boton_folder{
+color: #24c8db;
+}
+.rutaF{
+  width: 60%;
+}
+.saveB{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  top : 550px;
+}
