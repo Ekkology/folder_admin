@@ -20,8 +20,11 @@ function App() {
           if (direccion_folder) {
             console.log(
               "Se pudo seleccionar correctamente la carpeta: ",
-              direccion_folder
+              direccion_folder,
+              
+
             );
+            document.getElementById('rutaF').value = direccion_folder;
           } else {
             console.log("No se logró seleccionar ninguna carpeta");
           }
@@ -32,24 +35,28 @@ function App() {
       button.addEventListener("click", handleClick);
 
       return () => {
+        
         button.removeEventListener("click", handleClick);
+        
       };
     }
   }, []);
+  
+  
 
   return (
     <div className="container">
       <h1>Bienvenido a UDIR!</h1>
       <div className="primer_form">
-        <input className="rutaF" type="text" />
+        <form className="form1" id="form1">
+        <input className="rutaF" id="rutaF" type="text" />
+        </form>
         <button className="boton_folder" id="boton_select">
           Selecciona la carpeta
         </button>
-        
       </div>
       <button className="saveB">Save</button>
     </div>
-
   );
 }
 
