@@ -4,7 +4,7 @@ import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
 
 function App() {
-  const [greetMsg, setGreetMsg] = useState("");
+  const [greetMsg, setGreetMsg, save_ruta] = useState("");
   const [name, setName] = useState("");
 
   async function greet() {
@@ -20,11 +20,9 @@ function App() {
           if (direccion_folder) {
             console.log(
               "Se pudo seleccionar correctamente la carpeta: ",
-              direccion_folder,
-              
-
+              direccion_folder
             );
-            document.getElementById('rutaF').value = direccion_folder;
+            document.getElementById("rutaF").value = direccion_folder;
           } else {
             console.log("No se logró seleccionar ninguna carpeta");
           }
@@ -35,27 +33,34 @@ function App() {
       button.addEventListener("click", handleClick);
 
       return () => {
-        
         button.removeEventListener("click", handleClick);
-        
       };
     }
   }, []);
-  
-  
+
+  const boton_safe = document.getElementById("save1");
+  if (boton_safe) {
+   boton_safe.addEventListener("click", () => {
+       invoke("escritura_ruta", {
+        nombreRuta:document.getElementById("rutaF").value,
+      });
+    });
+  }
 
   return (
     <div className="container">
       <h1>Bienvenido a UDIR!</h1>
       <div className="primer_form">
         <form className="form1" id="form1">
-        <input className="rutaF" id="rutaF" type="text" />
+          <input className="rutaF" id="rutaF" type="text" />
         </form>
         <button className="boton_folder" id="boton_select">
           Selecciona la carpeta
         </button>
       </div>
-      <button className="saveB">Save</button>
+      <button id="save1" className="saveB">
+        Save
+      </button>
     </div>
   );
 }
