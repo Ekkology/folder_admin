@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+
 .logo.vite:hover {
   filter: drop-shadow(0 0 2em #747bff);
 }
@@ -12,14 +15,36 @@
   font-weight: 400;
 
   color: #0f0f0f;
-  background-color: #f6f6f6;
-
+  background-color: #FFF7D4; /* fondo del app */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  
 }
+
+
+/*estilo para la imagen que aparece de fondo en el app*/
+.image {
+  position: absolute; /*ajustar la imagen respecto al contenedor padre "div-container"*/
+  bottom: 20px; /*moverla hacia la izq*/ 
+  left: 20px;   /*moverla hacia la izq*/ 
+  width: 300px; /*ajustar tamaño */
+  height: auto; /* Mantener proporción de la imagen */
+  opacity: 0.8;
+
+}
+
+/*Diseño para el titulo*/
+
+.titulo {
+  font-family: "Itim";
+  font-size: 3rem;
+  color : #4C3D3D;
+  text-align: center;
+}
+
 
 .container {
   margin: 0;
@@ -69,7 +94,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   color: #0f0f0f;
-  background-color: #ffffff;
+  background-color: #FFD95A;
   transition: border-color 0.25s;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
@@ -114,6 +139,8 @@ button {
     background-color: #0f0f0f69;
   }
 }
+
+/*Es el form que contiene el input button y tambien contiene el button de agregar carpeta*/
 .primer_form {
   position: absolute;
   top: 50%;
@@ -126,19 +153,32 @@ button {
   align-items: center; 
   gap: 3%;
   padding: 10px;
-  background-color: rgb(216, 210, 210);
-  border: 1px solid #9a9595;
-  border-radius: 5px;
+  background-color: #FFD95A;
+  border: 3px solid #C07F00;
+  border-radius: 20px;
   box-sizing: border-box;
   
     
 }
+
+/*Boton "seleccione la carpeta*/
 .boton_folder{
-color: #24c8db;
+background-color: #C07F00;
+color: #FFF7D4;
+transition: box-shadow 0.5s ease, transform 0.5s ease;
 }
+.boton_folder:hover{
+  background-color: #FFD95A;
+  color: #4C3D3D;
+}
+
 .rutaF{
   width: 300%;
 }
+
+
+/*Boton de save*/
+
 .saveB{
   display: flex;
   justify-content: center;
@@ -150,6 +190,12 @@ color: #24c8db;
   display: flex;
   transform: translate(-50%, -50%);
   left: 50%;
-  
-  
+  background-color: #1D7113;
+  color:#FFF7D4;
+    
 }
+
+.saveB:hover{
+  background-color: #8dd58c;
+}
+
