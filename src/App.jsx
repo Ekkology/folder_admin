@@ -56,8 +56,8 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Bienvenido a UDIR!</h1>
-      <div className="primer_form">
+    <h1 className="titulo" > Bienvenido a UDIR </h1>   
+      <div className="primer_form ">
         <form className="form1" id="form1">
           <input className="rutaF" id="rutaF" type="text" />
         </form>
@@ -68,6 +68,7 @@ function App() {
       <button id="save1" className="saveB">
         Save
       </button>
+    <img src="src\images\fondo_udir.png" class= "image" />
     </div>
   );
 }
