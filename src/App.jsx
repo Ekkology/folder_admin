@@ -40,11 +40,18 @@ function App() {
 
   const boton_safe = document.getElementById("save1");
   if (boton_safe) {
-   boton_safe.addEventListener("click", () => {
-       invoke("escritura_ruta", {
-        nombreRuta:document.getElementById("rutaF").value,
+    try{
+      boton_safe.addEventListener("click", () => { 
+        invoke("escritura_ruta", {
+          nombreRuta: document.getElementById("rutaF").value,
+        });
       });
-    });
+    }
+    catch(error) {
+      console.log("Error al enviar datos a Rust")
+    }
+  } else {
+    console.log("No se que ha pasado, presiona el boton")
   }
 
   return (
