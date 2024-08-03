@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
-import "./App.css";
+import "src/style/App.css";
 
 function App() {
   const [greetMsg, setGreetMsg, save_ruta] = useState("");
@@ -68,7 +68,7 @@ function App() {
       <button id="save1" className="saveB">
         Save
       </button>
-    <img src="src\images\fondo_udir.png" class= "image" />
+    <img src="src\images\fondo_udir.png" className = "image" />
     </div>
   );
 }
