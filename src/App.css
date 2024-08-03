@@ -103,13 +103,13 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  border-color: #396cd8;
+/*button:hover {
+  border-color: #FFD95A;;
 }
 button:active {
   border-color: #396cd8;
   background-color: #e8e8e8;
-}
+}*/
 
 input,
 button {
@@ -179,23 +179,35 @@ transition: box-shadow 0.5s ease, transform 0.5s ease;
 
 /*Boton de save*/
 
-.saveB{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position:relative;
-  top : 270px;
-  width: 30%;
-  max-width: 100%;
-  display: flex;
-  transform: translate(-50%, -50%);
-  left: 50%;
+.saveB {
+  color: #FFF7D4;
   background-color: #1D7113;
-  color:#FFF7D4;
-    
-}
+  border: 5px solid #1D7113;
+  border-radius: 200px; /*ponerle el mismo al boton de la carpeta*/
+  padding: 15px 18px 30px 15px;
+  cursor: pointer;
+  height: 10px;
 
+  /*Propiedades font */
+  font-family: "Itim";
+  font-size: 25px;
+  text-align: center;
+  display: block;
+  margin: 5 auto;
+  justify-content: center;
+
+  box-shadow: 0 0 4px #999;
+  outline: none;
+  background-position: center;
+  transition: background 0.8s;
+}
 .saveB:hover{
-  background-color: #8dd58c;
+  background: #8dd58c radial-gradient(circle, transparent 1%, #8dd58c 1%) center/15000%;
+  color: #083403;
 }
 
+.saveB:active{
+  background-color: #8dd58c;
+  background-size: 100%;
+  transition: background 0s;
+}
