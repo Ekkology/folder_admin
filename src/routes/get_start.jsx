@@ -55,13 +55,19 @@ function App() {
         <form className="form1" id="form1">
           <input className="rutaF" id="rutaF" type="text" />
         </form>
+      </div>
+
+      <div className="contenedor_botones">
+        <button id="save1" className="saveB">
+        Save
+        </button>
+
         <button className="boton_folder" id="boton_select">
           Selecciona la carpeta
         </button>
+
       </div>
-      <button id="save1" className="saveB">
-        Save
-      </button>
+    
     <img src="src\images\fondo_udir.png" className = "image" />
     </div>
   );
