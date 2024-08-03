@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
-import "src/style/App.css";
+import "/src/style/App.css"
 
 function App() {
   const [greetMsg, setGreetMsg, save_ruta] = useState("");
@@ -40,17 +39,12 @@ function App() {
 
   const boton_safe = document.getElementById("save1");
   if (boton_safe) {
-    try{
       boton_safe.addEventListener("click", () => { 
         invoke("escritura_ruta", {
           nombreRuta: document.getElementById("rutaF").value,
         });
       });
-    }
-    catch(error) {
-      console.log("Error al enviar datos a Rust")
-    }
-  } else {
+    } else {
     console.log("No se que ha pasado, presiona el boton")
   }
 
