@@ -163,13 +163,45 @@ button {
 
 /*Boton "seleccione la carpeta*/
 .boton_folder{
-background-color: #C07F00;
-color: #FFF7D4;
-transition: box-shadow 0.5s ease, transform 0.5s ease;
+  background-color: #C07F00;
+  color: #FFF7D4;
+  cursor: pointer;
+  border: 5px solid #FFD95A ;
+  border-radius: 100px;
+  height: 60px; /*alto*/
+  width: 200px; /*ancho*/
+
+
+  box-shadow: 0 0 4px #999;
+  outline: none;
+  background-position: center;
+  transition: background 0.8s;
+  
+ /*Propiedades para el contenido del boton*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /*Propiedades font */
+  font-family: "Itim";
+  font-size: 20px;
+
+  /*Posición del botón*/
+  position : absolute;
+  top: 300px;
+  left: 1300px;
+
+
 }
 .boton_folder:hover{
-  background-color: #FFD95A;
-  color: #4C3D3D;
+  color: #C07F00;
+  background: #FFD95A radial-gradient(circle, transparent 1%, #FFD95A 1%) center/15000%;
+}
+
+.boton_folder:active{
+  background-color: #C07F00;
+  background-size: 100%;
+  transition: background 0s;
 }
 
 .rutaF{
@@ -182,32 +214,50 @@ transition: box-shadow 0.5s ease, transform 0.5s ease;
 .saveB {
   color: #FFF7D4;
   background-color: #1D7113;
-  border: 5px solid #1D7113;
-  border-radius: 200px; /*ponerle el mismo al boton de la carpeta*/
-  padding: 15px 18px 30px 15px;
+  border: 5px solid #8dd58c;
+  border-radius: 100px; /*ponerle el mismo al boton de la carpeta*/
   cursor: pointer;
-  height: 10px;
+
+  height: 20px; /*alto*/
+  width: 120px; /*ancho*/
+ 
+  /*Propiedades para el contenido del boton*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 
   /*Propiedades font */
   font-family: "Itim";
   font-size: 25px;
-  text-align: center;
-  display: block;
-  margin: 5 auto;
-  justify-content: center;
 
   box-shadow: 0 0 4px #999;
   outline: none;
   background-position: center;
   transition: background 0.8s;
+
+  /*posición del botón*/
+  position : absolute;
+  top: 400px;
+  left: 1350px;
+
 }
+
 .saveB:hover{
   background: #8dd58c radial-gradient(circle, transparent 1%, #8dd58c 1%) center/15000%;
   color: #083403;
 }
 
 .saveB:active{
-  background-color: #8dd58c;
+  background-color: #1D7113;
   background-size: 100%;
   transition: background 0s;
+}
+
+.contenedor_botones{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  
 }
