@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { invoke } from "@tauri-apps/api/tauri";
-import "/src/style/App.css";
+import "/src/style/Get_start.css";
 
 function App() {
   const [greetMsg, setGreetMsg, save_ruta] = useState("");
@@ -63,7 +63,7 @@ function App() {
       <h1 className="titulo"> Bienvenido a UDIR </h1>
       <div className="primer_form ">
         <form className="form1" id="form1">
-          <input className="rutaF" id="rutaF" type="text" />
+          <input  placeholder="Hola tu ruta es :" className="rutaF" id="rutaF" type="text" />
         </form>
       </div>
 

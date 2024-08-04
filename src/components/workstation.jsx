@@ -1,4 +1,4 @@
-function workstatiton(){
+function Workstatiton(){
     return(
         <div>
             Hola soy el workstatiton
@@ -6,4 +6,4 @@ function workstatiton(){
         )
 }
 
-export default workstatiton
+export default Workstatiton

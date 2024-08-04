@@ -1,5 +1,5 @@
 
-function nav_bar() {
+function Nav_bar() {
   return (
     <div>
       hola soy el navbar
@@ -7,4 +7,4 @@ function nav_bar() {
   )
 }
 
-export default nav_bar
+export default Nav_bar

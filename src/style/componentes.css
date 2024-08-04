@@ -1,0 +1,24 @@
+.form_1{
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr)); 
+    height: 100vh;
+    grid-template-rows: auto 1fr;
+    
+}
+
+.workstation {
+background-color:magenta;
+grid-column: span 12; 
+grid-row: 2; 
+
+}
+.Dashboard {
+    background-color: red;
+    grid-column: span 12 ; 
+    grid-row: 1; 
+/**/
+
+
+  }
+
+

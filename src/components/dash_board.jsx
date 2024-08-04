@@ -1,8 +1,9 @@
-function dash_board(){
+
+function Dash_board(){
     return (
         <div>
             Hola soy el dashboard
         </div>
     )
 }
-export default dashboard
+export default Dash_board
