@@ -10,11 +10,11 @@ function Start() {
       <div className="Dashboard">
         <Dash_board />
         </div>
-        {/* Esto es un comentario en el render 
+        
       <div className="navbar"> 
           <Nav_bar />
         </div>
-        */}
+        
         <div className="workstation">
           <Workstatiton />
         </div>

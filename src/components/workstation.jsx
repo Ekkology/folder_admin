@@ -1,9 +1,13 @@
-function Workstatiton(){
-    return(
-        <div>
-            Hola soy el workstatiton
-        </div>
-        )
+function Workstatiton() {
+  return (
+    <div>
+      <form>
+        <input placeholder="Coloca la ruta"></input>
+      </form>
+
+      <button>Pulsa</button>
+    </div>
+  );
 }
 
-export default Workstatiton
+export default Workstatiton;

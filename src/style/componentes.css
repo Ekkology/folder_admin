@@ -1,24 +1,45 @@
+body{
+  background-color: aliceblue;
+}
+
 .form_1{
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr)); 
     height: 100vh;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: 5ch auto;
     
 }
 
 .workstation {
-background-color:magenta;
+background-color: #FFF7D4;
 grid-column: span 12; 
-grid-row: 2; 
+grid-row:  2; 
+justify-content: center;
+align-items: center;
+display: flex;
+border-bottom-right-radius: 15px;
+
 
 }
 .Dashboard {
-    background-color: red;
-    grid-column: span 12 ; 
-    grid-row: 1; 
+    background-color: #FFD95A;
+    grid-column: span 2 ; 
+    grid-row:  2; 
+    border-bottom-left-radius: 15px;
 /**/
 
 
+  }
+
+  .navbar{
+    background-color: #C07F00;
+    grid-row: 1;
+    grid-column: span 12;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
   }
 
 

@@ -5,6 +5,6 @@ import Start  from "./routes/start";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Start/>
+    <App/>
   </React.StrictMode>,
 );
